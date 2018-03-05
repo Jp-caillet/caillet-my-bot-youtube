@@ -41,8 +41,17 @@ module.exports = class Botyt {
     return this.json;
   }
 
-  getId () {
-    return this.json.items[0].id.videoId;
+  getId (i) {
+    return this.json.items[i].id.videoId;
+  }
+  getImgVideo (i) {
+    return this.json.items[i].snippet.thumbnails.default.url;
+  }
+  getTitleVideo (i) {
+    return this.json.items[i].snippet.title;
+  }
+  getTittleChanel (i) {
+    return this.json.items[i].snippet.channelTitle;
   }
 
   /**
